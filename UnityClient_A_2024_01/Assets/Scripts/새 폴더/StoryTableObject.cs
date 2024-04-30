@@ -34,7 +34,7 @@ namespace STORYGAME
             public List<Result> failResult = new List<Result>();
         }
 
-
+        [System.Serializable]
         public class Result
         {
             public Enums.ResultType resultType;
