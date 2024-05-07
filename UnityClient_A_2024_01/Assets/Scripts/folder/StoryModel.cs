@@ -65,12 +65,33 @@ public class StoryModel : ScriptableObject
             CheckWis,
             CheckCHA
         }
-        
-    }
-    public EventType eventType;
 
-    public Result[] suceessResult;
-    public Result[] failResult;
+        public EventType eventType;
+
+        public Result[] suceessResult;
+        public Result[] failResult;
+
+    }
+
+
+    [System.Serializable]
+    public class Result
+    {
+        public enum ResultType
+        {
+            ChangeHp,
+            ChangeSp,
+            AddExpreience,
+            GoToShop,
+            GoNextStory,
+            GoToRandomStory,
+            GoToEnding
+        }
+
+        public ResultType resultType;
+        public int value;
+        public Stats stats;
+    }
 
 
 
