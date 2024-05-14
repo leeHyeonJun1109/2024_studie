@@ -4,7 +4,7 @@ using UnityEngine;
 using static STORYGAME.StoryTableObject;
 using STORYGAME;
 
-[CreateAssetMenu(fileName = "NewStory", menuName = "ScriptableObjects/StoryTableObject")]
+[CreateAssetMenu(fileName = "NewStory", menuName = "ScriptableObjects/StoryModel")]
 public class StoryModel : ScriptableObject
 {
     public int storyNumber;
