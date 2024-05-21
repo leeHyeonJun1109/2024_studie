@@ -5,8 +5,29 @@ using UnityEditor;
 using System.Text;
 using STORYGAME;
 
+#if UNITY_EDITOR
+[CustomEditor(typeof(GameSystem))]
+public class GameSystemEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        GameSystem gameSystem = (GameSystem)target;
+
+        if (GUILayout.Button("Reset Story Models"))      //에디터에서 버튼 생성 
+        {
+            gameSystem.ResetStoryModels();
+        }
+    }
+
+}
+
+#endif
+
 
 public class GameSystem : MonoBehaviour
+
 {
     public StoryModel[] storyModels;
 
@@ -63,6 +84,10 @@ public class GameSystem : MonoBehaviour
     public void StoryShow(int number)
     {
         StoryModel tempStoryModel = FindStoryModels(number);
+
+        StorySystem.instance.currentStoryModel = tempStoryModel;
+        StorySystem.instance.CoShowText();
+
     }
 
 

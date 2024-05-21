@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 257721567}
   - component: {fileID: 257721566}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: Button_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -819,6 +819,7 @@ GameObject:
   - component: {fileID: 707556484}
   - component: {fileID: 707556483}
   - component: {fileID: 707556482}
+  - component: {fileID: 707556486}
   m_Layer: 0
   m_Name: StorySystem
   m_TagString: Untagged
@@ -880,12 +881,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed371cf3e9acec4abed18af3c5bc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStoryModel: {fileID: 11400000, guid: 114bbb263394c9c419832e9d52ea2006, type: 2}
-  delay: 0.1
+  currentStoryModel: {fileID: 11400000, guid: 0d54fae1312c71547ab0b5e2685042ad, type: 2}
+  delay: 0.01
   fullText: 
   textComponent: {fileID: 1056477576}
-  storyIndex: {fileID: 0}
-  imageComponent: {fileID: 0}
+  storyIndex: {fileID: 367286039}
+  imageComponent: {fileID: 1810789058}
   buttonWay:
   - {fileID: 1784277277}
   - {fileID: 257721566}
@@ -894,6 +895,7 @@ MonoBehaviour:
   - {fileID: 359176416}
   - {fileID: 943136818}
   - {fileID: 489743324}
+  currentTextShow: 0
 --- !u!224 &707556485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -913,6 +915,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &707556486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707556481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c927e3b1089764f83f9797eef322b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyModels:
+  - {fileID: 11400000, guid: 0d54fae1312c71547ab0b5e2685042ad, type: 2}
+  - {fileID: 11400000, guid: 193a5b98f39b2b84cbb79bd7dbe5f744, type: 2}
+  state:
+    hpPoint: 0
+    spPoint: 0
+    currentHpPoint: 0
+    currentSpPoint: 0
+    currentXpPoint: 0
+    strength: 0
+    dexterity: 0
+    consitution: 0
+    Intelligence: 0
+    wisdom: 0
+    charisma: 0
+  currentState: 0
+  currentStoryIndex: 1
 --- !u!1 &943136816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1183,7 @@ GameObject:
   - component: {fileID: 1541707096}
   - component: {fileID: 1541707095}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: Button_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1304,7 @@ GameObject:
   - component: {fileID: 1784277278}
   - component: {fileID: 1784277277}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Button_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
